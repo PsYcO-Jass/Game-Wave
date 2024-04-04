@@ -1,0 +1,636 @@
+/* -----------------GLOBAL STYLES FOR THE WEBSITE----------------- */
+
+/* Font = Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Font = Modern_Warframe */
+/* We couldn't find any font having gaming style on google font so we are using Modern Warfare font for the gaming website. */
+@font-face {
+  font-family: "Modern_Warframe";
+  src: url("./Font/MODERN_WARFARE.ttf") format("truetype"),
+    url("./Font/MODERN_WARFARE.otf") format("opentype");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Modern_Warframe", fallback;
+}
+
+/* Variables */
+:root {
+  --white: #f9f9f9;
+  --logoblack: #161515;
+  --green: #bfff2d;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Global Styles */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* -----------------MOBILE FIRST APPROACH----------------- */
+
+/* Header */
+header {
+  background-color: var(--logoblack);
+  box-shadow: 1px 1px 5px 0px var(--green);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+/* Logo */
+.logo {
+  width: 40%; /* 40% of the header as the logo looking good */
+  margin-left: 10px;
+}
+/* Menu */
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--logoblack);
+  overflow: hidden; /* Hide the menu so that it will be visible after clicking on hamburger */
+}
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: var(--white);
+  text-align: center;
+}
+
+.menu a:hover {
+  background-color: var(--green);
+  color: var(--logoblack);
+}
+nav {
+  max-height: 0; /* Initially hide the menu */
+  transition: max-height 0.5s ease-out; /* Using ease-out for smooth animation effect of menu scrolling down */
+}
+
+/* Menu Icon */
+.hamb {
+  cursor: pointer; /* Change cursor to pointer */
+  float: right;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Span tag */
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative; /* Position relative to the parent element */
+  width: 24px;
+}
+
+/* Before and After hamb-line this will create 3 line for making hamburger menu bar */
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--green);
+  content: ""; /* Empty content is taken so that it create the three lines for a hamburger menu bar*/
+  display: block;
+  height: 100%;
+  position: absolute; /* Position absolute to the parent element */
+  transition: all 0.2s ease-out; /* Using ease-out for smooth animation effect of menu when clicked it turned into cross */
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px; /* Top 5px for the first line */
+}
+.hamb-line::after {
+  top: -5px; /* Top -5px for the third line */
+}
+
+.side-menu {
+  display: none; /* Hide checkbox */
+}
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav {
+  /* When checkbox is checked then show the menu */
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  /* When checkbox is checked then the centered white line will disappered because we need 2 lines to make a cross */
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  /* When checkbox is checked then the first line will rotate 45 degree and move to the center to make the cross symbol */
+  transform: rotate(-45deg);
+  top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  /* When checkbox is checked then the third line will rotate -45 degree and move to the center to make the cross symbol */
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* Footer */
+footer {
+  background-color: var(--logoblack);
+  color: var(--white);
+  padding: 1rem;
+}
+
+.footer-content-about,
+.footer-content-link,
+.footer-content-final {
+  border-bottom: 1px solid var(--green);
+  padding: 1rem;
+}
+
+.footer-content-about h4 {
+  color: var(--green);
+  font-size: 1.5rem;
+}
+
+.footer-logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.footer-content-link-icon a {
+  color: var(--green);
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-content-link-icon a:hover {
+  color: var(--white);
+  text-shadow: var(--green) 1px 0 10px;
+}
+
+.footer-social-text,
+.footer-subscribe-text {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--green);
+  border-bottom: 1px solid var(--white);
+}
+
+.footer-social ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+}
+
+.footer-social ul li {
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-social a {
+  color: var(--green);
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: var(--white);
+  text-shadow: var(--green) 1px 0 10px;
+}
+
+.subscribe-section {
+  text-align: center;
+  padding: 1rem;
+}
+
+.subscribe-section input {
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--green);
+  color: var(--logoblack);
+}
+
+.subscribe_icon {
+  position: relative;
+  right: 0.3rem;
+  bottom: 0;
+  top: 0.1rem;
+  background-color: var(--logoblack);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--green);
+  border-left: none;
+}
+
+.subscribe_icon:hover {
+  background-color: var(--green);
+  color: var(--logoblack);
+}
+
+.subscribe-section-button {
+  display: none;
+}
+
+.footer-credit {
+  text-align: center;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+/* -----------------CONTACT PAGE----------------- */
+.contact {
+  min-height: 100vh;
+  background: var(--logoblack);
+  background-image: url("./Images/Contect_us_background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.contact-container {
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 8px 20px 0px 8px rgb(191 255 45 / 15%);
+  border-radius: 15px;
+  background: rgb(0 0 0 / 80%);
+}
+
+.contact-container h2 {
+  font-size: 2.7rem;
+  padding: 1rem;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--green);
+}
+
+.contact-container-heading,
+.contact-container-paragraph,
+.contact-container-message-text {
+  border-bottom: 2px solid var(--white);
+}
+
+.contact-container-message-text {
+  border-top: 2px solid var(--white);
+}
+.contact-container p {
+  font-size: 1.1rem;
+  padding: 1rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-form {
+  padding: 1rem;
+  display: grid;
+  justify-items: center;
+}
+
+.contact-form input {
+  width: 18rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  background: rgb(4 4 4 / 50%);
+  border-bottom: 2px solid var(--green);
+  border-right: 2px solid var(--green);
+  color: var(--white);
+}
+
+.contact-form input::placeholder {
+  color: var(--green);
+}
+
+.contact-form h4 {
+  font-size: 1.21rem;
+  padding: 1rem 0 1rem 0;
+  font-weight: 300;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--green);
+}
+
+.contact-form textarea {
+  width: 18rem;
+  height: 10rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: rgba(4, 4, 4, 0.543);
+  border-bottom: 5px solid var(--green);
+  border-right: 5px solid var(--green);
+  border-top: 4px solid var(--white);
+  border-left: 4px solid var(--white);
+  color: var(--white);
+}
+
+textarea::-webkit-scrollbar {
+  /* Scroll bar for textarea */
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  /* Scroll bar thumb for textarea */
+  background-color: rgba(194, 194, 194, 0.73);
+}
+
+#contact-us-button {
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 600;
+  background: var(--green);
+  border: 2px solid var(--green);
+  border-radius: 15px;
+  color: var(--logoblack);
+  padding: 0;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#contact-us-button:hover {
+  background: var(--logoblack);
+  color: var(--green);
+}
+
+/* -----------------ERROR PAGE----------------- */
+
+.error-404-mobile-image{
+  background: var(--logoblack);
+  background-image: url("./Images/Mobil_404_Error.png");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+
+/* -----------------TABLET AND DESKTOP----------------- */
+
+/* -----------------RESPONSIVE TABLET----------------- */
+
+@media (min-width: 768px) {
+  /* Header  */
+  .logo {
+    width: 25%;
+    margin: 1rem;
+  }
+
+  nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+  }
+  .menu a {
+    padding: 5rem 1rem 5rem 1rem;
+  }
+  .menu a:hover {
+    background-color: transparent;
+    color: var(--green);
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  /* Footer */
+
+  .footer-content-about {
+    text-align: center;
+  }
+  .footer-content-about h4 {
+    font-size: 2rem;
+  }
+
+  .footer-content-link,
+  .footer-content-final {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-content-link {
+    text-align: center;
+  }
+
+  .footer-content-link-icon a {
+    font-size: 1.5rem;
+  }
+
+  .footer-content-final {
+    gap: 0.5rem;
+  }
+
+  .footer-logo img {
+    width: 100%;
+  }
+
+  .footer-social-text,
+  .footer-subscribe-text {
+    padding: 0 0 0.5rem 0;
+  }
+
+  .footer-social ul {
+    padding: 0%;
+  }
+
+  .subscribe_icon {
+    display: none;
+  }
+
+  .subscribe-section-button {
+    display: block;
+  }
+
+  .subscribe-section-button-input {
+    display: block;
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--green);
+    border-radius: 15px;
+    color: var(--logoblack);
+    background: var(--green);
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .subscribe-section-button-input:hover {
+    background: var(--logoblack);
+    color: var(--green);
+  }
+
+  /*-----------------CONTACT PAGE----------------- */
+  .contact {
+    min-height: 100vh;
+    background: var(--logoblack);
+    background-image: url("./Images/Contect_us_background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .contact-container {
+    width: 40rem;
+    height: 40.1rem;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin: -200px 0 0 -335px;
+    box-shadow: 8px 20px 0px 8px rgb(191 255 45 / 15%);
+    border-radius: 15px;
+    background: rgb(0 0 0 / 60%);
+    backdrop-filter: blur(10px);
+  }
+
+  .contact-form {
+    padding: 1rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #lastName,
+  #mobile {
+    margin-left: 15px;
+  }
+
+  .contact-container-message-text {
+    grid-column: span 2;
+  }
+
+  .contact-form textarea {
+    grid-column: span 2;
+    width: 35rem;
+    height: 7rem;
+  }
+
+  #contact-us-button {
+    grid-column: span 2;
+    margin-top: 10px;
+  }
+
+  /* -----------------ERROR PAGE----------------- */
+
+  .error-404-mobile-image {
+		display: none;
+	}
+	
+	.error-404-tablet-image {
+		background-image: url("./Images/Tablet_404_Error.png");
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 100vw;
+	}
+
+
+}
+
+/* -----------------RESPONSIVE DESKTOP----------------- */
+@media (min-width: 1024px) {
+  /* Header  */
+  .logo {
+    width: 10%;
+    margin: 0 2rem;
+  }
+
+  nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+  }
+  .menu a {
+    padding: 5rem 1rem 5rem 1rem;
+    font-size: 1.5rem;
+  }
+  .menu a:hover {
+    background-color: transparent;
+    color: var(--green);
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  /*-----------------CONTACT PAGE----------------- */
+
+  .contact {
+    min-height: 100vh;
+    background: var(--logoblack);
+    background-image: url("./Images/Contect_us_background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .contact-container {
+    width: 50rem;
+    height: 42rem;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin: -310px 0 0 -408px;
+    box-shadow: 8px 20px 0px 8px rgb(191 255 45 / 15%);
+    border-radius: 15px;
+    background: rgb(0 0 0 / 60%);
+    backdrop-filter: blur(10px);
+  }
+
+  .contact-form input {
+    width: 22rem;
+  }
+
+  .contact-form h4 {
+    font-size: 2rem;
+  }
+
+  #contact-us-button {
+    margin-top: 15px;
+  }
+
+
+  /* -----------------ERROR PAGE----------------- */
+
+  .erreor-404-tablet-image {
+		display: none;
+	}
+	
+	.erreor-404-desktop-image {
+		background-image: url("./Images/Desktop_404_Error.png");
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 100vw;
+	}
+
+}
