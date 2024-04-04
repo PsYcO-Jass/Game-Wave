@@ -264,7 +264,7 @@ footer {
   text-align: center;
   box-shadow: 8px 20px 0px 8px rgb(191 255 45 / 15%);
   border-radius: 15px;
-  background: rgb(0 0 0 / 80%);
+  background: rgb(0 0 0 / 60%);
 }
 
 .contact-container h2 {
@@ -303,16 +303,16 @@ footer {
   width: 18rem;
   height: 3rem;
   text-align: center;
+  border: none;
   font-size: 1rem;
   margin-bottom: 10px;
   background: rgb(4 4 4 / 50%);
   border-bottom: 2px solid var(--green);
-  border-right: 2px solid var(--green);
   color: var(--white);
 }
 
 .contact-form input::placeholder {
-  color: var(--green);
+  color: #bfff2d63;
 }
 
 .contact-form h4 {
