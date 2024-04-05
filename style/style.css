@@ -47,27 +47,53 @@ body {
 
 /* HEADER */
 header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: var(--logoblack);
-  padding: 1rem 0;
-  display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--logoblack);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
 }
 .navBar_active{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
     background-color: var(--logoblack);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navBar_active ul{
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    list-style: none;
+}
+.navBar_active ul li{
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    list-style: none;
+}
+.navBar_active ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
 }
 .navBar ul{
     list-style: none;
 }
 .navBar a{
     text-decoration: none;
+    color: #ffffff;
+}
+.navBar ul li{
+    list-style: none;
+    padding: 1rem;
+    /* border: 1px solid; */
 }
 .closeNav{
     position: absolute;
@@ -82,14 +108,33 @@ header {
     display: none;
 }
 .navBar ul{
-    display: grid;
+    display: flex;
+    gap: 1rem;
 }
 header img{
-    width: 20%;
+    width: auto;
+    height: 70px;
+    object-fit: contain;
+    margin-right: auto;
+    max-width: 100%;
+}
+.inputField {
+    padding: 7px 25px;
+    border: 1px solid #242447;
+    border-radius: 5px;
+    outline: none;
+    background: #ffffff;
+    color: #9494C7;
+}
+.searchBar {
+    position: relative;
+    color: #9494C7;
+}
+.searchIcon {
+    position: absolute;
+    top: 25%;
 }
 /************* HEADER END ************/
-
-
 
 /* MAIN */
 main{
@@ -99,16 +144,16 @@ main{
 }
 main section{
     display: grid;
-}
-.featured-section{
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+    margin-top: 1rem
 }
-.featured-section h2{
-    grid-column: span 3;
+section.featured-section {
+    /* background-color: #00000082; */
+    padding: 1rem;
 }
+
 .GameCard {
-    height: 36rem;
+    height: 30rem;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -175,6 +220,10 @@ main section{
 
 .symbols-outlined {
     vertical-align: middle;
+}
+.upcomingEvent article{
+    display: grid;
+    gap: 1rem
 }
 /****************** MAIN END ********************/
 
@@ -285,9 +334,89 @@ footer {
 /******************* FOOTER *************************/
 
 
+
 /* RESPONSIVE */
 @media only screen and (min-width:768px) {
- 
+    .featured-section {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+    }
+ .trendingText{
+    grid-column: span 2;
+    align-content: center;
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+ }
+    .GameCard {
+        grid-column: span 1; /* Span one column */
+      }
+      
+      .GameCard:nth-child(odd) {
+        grid-row: span 2; /* Span two rows */
+        grid-column: span 2;
+      }
+      
+      .GameCard:nth-child(even) {
+        grid-row: span 2; /* Span two rows */
+        grid-column: 3; /* Align to the third column */
+      }
+      .upcomingEvent article{
+        grid-template-columns: 1fr 1fr;
+    }
+    #hamBurger{
+        display: none;
+    }
+    nav ul li a {
+        position: relative;
+    }
+    .navBar{
+        display: block;
+    }
+    nav ul li a:hover:after {
+        width: 100%;
+    }
+    .searchIcon {
+        left: 5px;
+    }
+    nav ul li a {
+        transition: all 0.5s;
+    }
+    nav ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 1px;
+    }
+    nav ul li a:after {
+        text-align: left;
+        content: '.';
+        margin: 0;
+        opacity: 0;
+    }
+    
+    nav ul li a:hover {
+        color: #fff;
+        z-index: 1;
+        background-color: grey;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+    
+    nav ul li a:hover:after {
+        z-index: -10;
+        animation: fill 0.5s forwards;
+        -webkit-animation: fill 1s forwards;
+        -moz-animation: fill 1s forwards;
+        opacity: 1;
+     
+    } 
     /* FOOTER */
     .footer-content-about {
         text-align: center;
@@ -356,14 +485,12 @@ footer {
 }
 
 @media only screen and (min-width:1024px) {
-#hamBurger{
-    display: none;
-}
-.navBar{
-    display: block;
-}
+    .trendingText{
+        left: 11rem;
+    }
 .navBar ul{
-    grid-template-columns: repeat(4,1fr);
+    /* grid-template-columns: repeat(4,1fr); */
+ 
 }
 }
 @media only screen and (min-width:1200px) {
