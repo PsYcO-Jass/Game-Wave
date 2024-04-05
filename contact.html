@@ -19,36 +19,27 @@
     <!-- Header -->
     <!-- Navigation bar -->
     <header>
-        <!-- Logo -->
-        <img
-          class="logo"
-          src="./Images/Game_Wave_Logo.png"
-          alt="Game Wave Logo"
-        />
-        <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu" />
-        <!-- "side-menu" sets as a unique identifier for input checkbox. we used this because we want to use it as a true/flase value. True when hamburger is clicked and flase when not clicked or at defult position -->
-        <label class="hamb" for="side-menu" aria-label="Open Menu">
-          <!-- for="side-menu" specifies that this label is for with the checkbox having the id=“side-menu.” -->
-          <span class="hamb-line"></span>
-          <!-- <span> inside the label represents the three lines of the hamburger icon -->
-        </label>
-        <!-- Menu -->
-        <nav>
-          <ul class="menu">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Article</a></li>
-            <li><a href="#">Sources</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <!-- <li>
-              <form class="search-form">
-                <input type="search" placeholder="Search...">
-                <button type="submit">Search</button>
-              </form>
-            </li> -->
-          </ul>
-        </nav>
-      </header>
+      <img src="./Images/Game_Wave_Logo.png" alt="Game Wave Logo" />
+      <a id="hamBurger" href="javascript:void(0);" class="icon">
+        <div class="mobil-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </a>
+      <a id="closeHamBurger" href="javascript:void(0);" class="closeNav d-none">
+        X
+      </a>
+      <nav id="nav-bar" class="navBar slide-bottom">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./sources.html">Sources</a></li>
+          <li><a href="./story.html">Articles</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><div class="searchBar">
+            <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+            <input class="inputField" type="text" placeholder="Search" />
+          </div></li>
+        </ul>
+     </header>
 
     <!-- Contact Us -->
     <section class="contact">

@@ -20,6 +20,7 @@ h4 {
 
 /* Variables */
 :root {
+  --bgblack: #303030;
   --white: #f9f9f9;
   --logoblack: #161515;
   --green: #bfff2d;
@@ -160,7 +161,7 @@ ul {
 /* -----------------STORY PAGE----------------- */
 
 .article-page{
-  background: var(--logoblack);
+  background: var(--bgblack);
   color: var(--white);
   padding: 2rem;
   display: block;
@@ -214,7 +215,7 @@ ul {
 /* -----------------SOURCE PAGE----------------- */
 
 .source-container{
-  background: var(--logoblack);
+  background: var(--bgblack);
   color: var(--white);
   padding: 1rem;
 }
@@ -278,7 +279,7 @@ ul {
 /* -----------------CONTACT PAGE----------------- */
 .contact {
   min-height: 100vh;
-  background: var(--logoblack);
+  background: var(--bgblack);
   background-image: url("./Images/Contect_us_background.png");
   background-repeat: no-repeat;
   background-position: center center;
