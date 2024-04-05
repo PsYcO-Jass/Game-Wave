@@ -68,6 +68,10 @@ header {
     left: 0;
     right: 0;
 }
+.navBar_active.slide-bottom {
+	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .navBar_active ul{
     padding: 2rem 1rem 1rem;
     text-align: center;
@@ -371,59 +375,7 @@ footer {
       .upcomingEvent article{
         grid-template-columns: 1fr 1fr;
     }
-    #hamBurger{
-        display: none;
-    }
-    nav ul li a {
-        position: relative;
-    }
-    .navBar{
-        display: block;
-    }
-    nav ul li a:hover:after {
-        width: 100%;
-    }
-    .searchIcon {
-        left: 5px;
-    }
-    nav ul li a {
-        transition: all 0.5s;
-    }
-    nav ul li a:after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 0%;
-        content: '.';
-        color: transparent;
-        background: #aaa;
-        height: 1px;
-    }
-    nav ul li a:after {
-        text-align: left;
-        content: '.';
-        margin: 0;
-        opacity: 0;
-    }
-    
-    nav ul li a:hover {
-        color: #fff;
-        z-index: 1;
-        background-color: grey;
-        border-radius: 4px;
-        padding: 0.5rem;
-    }
-    
-    nav ul li a:hover:after {
-        z-index: -10;
-        animation: fill 0.5s forwards;
-        -webkit-animation: fill 1s forwards;
-        -moz-animation: fill 1s forwards;
-        opacity: 1;
-     
-    } 
+   
     /* FOOTER */
     .footer-content-about {
         text-align: center;
@@ -493,6 +445,59 @@ footer {
 }
 
 @media only screen and (min-width:1024px) {
+    #hamBurger{
+        display: none;
+    }
+    nav ul li a {
+        position: relative;
+    }
+    .navBar{
+        display: block;
+    }
+    nav ul li a:hover:after {
+        width: 100%;
+    }
+    .searchIcon {
+        left: 5px;
+    }
+    nav ul li a {
+        transition: all 0.5s;
+    }
+    nav ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 1px;
+    }
+    nav ul li a:after {
+        text-align: left;
+        content: '.';
+        margin: 0;
+        opacity: 0;
+    }
+    
+    nav ul li a:hover {
+        color: #fff;
+        z-index: 1;
+        background-color: grey;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+    
+    nav ul li a:hover:after {
+        z-index: -10;
+        animation: fill 0.5s forwards;
+        -webkit-animation: fill 1s forwards;
+        -moz-animation: fill 1s forwards;
+        opacity: 1;
+     
+    } 
     .trendingText{
         left: 11rem;
     }
