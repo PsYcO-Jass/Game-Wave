@@ -51,105 +51,10 @@ ul {
 
 /* -----------------MOBILE FIRST APPROACH----------------- */
 
-/* Header */
-header {
-  background-color: var(--logoblack);
-  box-shadow: 1px 1px 5px 0px var(--green);
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-/* Logo */
-.logo {
-  width: 40%; /* 40% of the header as the logo looking good */
-  margin-left: 10px;
-}
-/* Menu */
-nav {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: var(--logoblack);
-  overflow: hidden;
-}
 
-.menu a {
-  display: block;
-  padding: 30px;
-  color: var(--white);
-  text-align: center;
-}
-
-.menu a:hover {
-  background-color: var(--green);
-  color: var(--logoblack);
-}
-nav {
-  max-height: 0; /* Initially hide the menu */
-  transition: max-height 0.5s ease-out; /* Using ease-out for smooth animation effect of menu scrolling down */
-}
-
-/* Menu Icon */
-.hamb {
-  cursor: pointer; /* Change cursor to pointer */
-  float: right;
-  padding: 2.5rem 1.5rem;
-}
-
-/* Span tag */
-.hamb-line {
-  background: var(--white);
-  display: block;
-  height: 2px;
-  position: relative; /* Position relative to the parent element */
-  width: 24px;
-}
-
-/* Before and After hamb-line this will create 3 line for making hamburger menu bar */
-.hamb-line::before,
-.hamb-line::after {
-  background: var(--green);
-  content: ""; /* Empty content is taken so that it create the three lines for a hamburger menu bar*/
-  display: block;
-  height: 100%;
-  position: absolute; /* Position absolute to the parent element */
-  transition: all 0.2s ease-out; /* Using ease-out for smooth animation effect of menu when clicked it turned into cross */
-  width: 100%;
-}
-.hamb-line::before {
-  top: 5px; /* Top 5px for the first line */
-}
-.hamb-line::after {
-  top: -5px; /* Top -5px for the third line */
-}
-
-.side-menu {
-  display: none; /* Hide checkbox */
-}
-
-/* Toggle menu icon */
-.side-menu:checked ~ nav {
-  /* When checkbox is checked then show the menu */
-  max-height: 100%;
-}
-.side-menu:checked ~ .hamb .hamb-line {
-  /* When checkbox is checked then the centered white line will disappered because we need 2 lines to make a cross */
-  background: transparent;
-}
-.side-menu:checked ~ .hamb .hamb-line::before {
-  /* When checkbox is checked then the first line will rotate 45 degree and move to the center to make the cross symbol */
-  transform: rotate(-45deg);
-  top: 0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-  /* When checkbox is checked then the third line will rotate -45 degree and move to the center to make the cross symbol */
-  transform: rotate(45deg);
-  top: 0;
-}
 
 /* Footer */
-footer {
+/* footer {
   background-color: var(--logoblack);
   color: var(--white);
   padding: 1rem;
@@ -249,7 +154,7 @@ footer {
 .footer-credit {
   text-align: center;
   padding: 1rem 1rem 0.5rem 1rem;
-}
+} */
 
 
 /* -----------------STORY PAGE----------------- */
