@@ -173,6 +173,19 @@ header img{
     padding: 1rem;
     margin: auto;
 }
+.topRated_section {
+    display: grid;
+    gap: 1rem;
+}
+.topratedParent{
+    background-color: #0000003d;
+}
+.topRated-heading{
+    text-align: center;
+}
+.topRated-heading h2{
+    font-size: clamp(1.5rem, 5vw, 4rem);
+}
 .upcomingParent {
     background-color: #dddddd;
 }
@@ -401,6 +414,12 @@ footer {
     }
     .upcomingImg{
         text-align: center;
+    }
+    .topRated_section {
+        grid-template-columns: 1fr 1fr;
+    }
+    .topRated_section p{
+        align-content: center;
     }
  .trendingText{
     grid-column: span 2;
