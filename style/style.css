@@ -7,8 +7,8 @@
 /* We couldn't find any font having gaming style on google font so we are using Modern Warfare font for the gaming website. */
 @font-face {
   font-family: "Modern_Warframe";
-  src: url("./Font/MODERN_WARFARE.ttf") format("truetype"),
-    url("./Font/MODERN_WARFARE.otf") format("opentype");
+  src: url("../Font/MODERN_WARFARE.ttf") format("truetype"),
+    url("../Font/MODERN_WARFARE.otf") format("opentype");
 }
 
 h1,
@@ -175,11 +175,180 @@ main section{
 }
 /****************** MAIN END ********************/
 
+/* FOOTER */
+
+footer {
+    background-color: var(--logoblack);
+    color: var(--white);
+    padding: 1rem;
+  }
+  
+  .footer-content-about,
+  .footer-content-link,
+  .footer-content-final {
+    border-bottom: 1px solid var(--green);
+    padding: 1rem;
+  }
+  
+  .footer-content-about h4 {
+    color: var(--green);
+    font-size: 1.5rem;
+  }
+  
+  .footer-logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .footer-content-link-icon a {
+    color: var(--green);
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .footer-content-link-icon a:hover {
+    color: var(--white);
+    text-shadow: var(--green) 1px 0 10px;
+  }
+  
+  .footer-social-text,
+  .footer-subscribe-text {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--green);
+    border-bottom: 1px solid var(--white);
+  }
+  
+  .footer-social ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+  }
+  
+  .footer-social ul li {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .footer-social a {
+    color: var(--green);
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .footer-social a:hover {
+    color: var(--white);
+    text-shadow: var(--green) 1px 0 10px;
+  }
+  
+  .subscribe-section {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .subscribe-section input {
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--green);
+    color: var(--logoblack);
+  }
+  
+  .subscribe_icon {
+    position: relative;
+    right: 0.3rem;
+    bottom: 0;
+    top: 0.1rem;
+    background-color: var(--logoblack);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--green);
+    border-left: none;
+  }
+  
+  .subscribe_icon:hover {
+    background-color: var(--green);
+    color: var(--logoblack);
+  }
+  
+  .subscribe-section-button {
+    display: none;
+  }
+  
+  .footer-credit {
+    text-align: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+/******************* FOOTER *************************/
 
 
 /* RESPONSIVE */
 @media only screen and (min-width:768px) {
  
+    /* FOOTER */
+    .footer-content-about {
+        text-align: center;
+      }
+      .footer-content-about h4 {
+        font-size: 2rem;
+      }
+    
+      .footer-content-link,
+      .footer-content-final {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    
+      .footer-content-link {
+        text-align: center;
+      }
+    
+      .footer-content-link-icon a {
+        font-size: 1.5rem;
+      }
+    
+      .footer-content-final {
+        gap: 0.5rem;
+      }
+    
+      .footer-logo img {
+        width: 100%;
+      }
+    
+      .footer-social-text,
+      .footer-subscribe-text {
+        padding: 0 0 0.5rem 0;
+      }
+    
+      .footer-social ul {
+        padding: 0%;
+      }
+    
+      .subscribe_icon {
+        display: none;
+      }
+    
+      .subscribe-section-button {
+        display: block;
+      }
+    
+      .subscribe-section-button-input {
+        display: block;
+        padding: 0.5rem 2rem;
+        border: 1px solid var(--green);
+        border-radius: 15px;
+        color: var(--logoblack);
+        background: var(--green);
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.2s ease-in-out;
+      }
+    
+      .subscribe-section-button-input:hover {
+        background: var(--logoblack);
+        color: var(--green);
+      }
+    /**************** FOOTER END ***************/
 }
 
 @media only screen and (min-width:1024px) {
