@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Wave</title>
     <link rel="icon" href="./Images/Game_Wave_Title_Logo.png" />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- <link rel="stylesheet" href="./main.css" /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -15,49 +16,94 @@
     />
   </head>
   <body>
-    <!-- Header -->
-    <!-- Navigation bar -->
-    <header>
-      <!-- Logo -->
-      <img
-        class="logo"
-        src="./Images/Game_Wave_Logo.png"
-        alt="Game Wave Logo"
-      />
-      <!-- Hamburger icon -->
-      <input class="side-menu" type="checkbox" id="side-menu" />
-      <!-- "side-menu" sets as a unique identifier for input checkbox. we used this because we want to use it as a true/flase value. True when hamburger is clicked and flase when not clicked or at defult position -->
-      <label class="hamb" for="side-menu" aria-label="Open Menu">
-        <!-- for="side-menu" specifies that this label is for with the checkbox having the id=“side-menu.” -->
-        <span class="hamb-line"></span>
-        <!-- <span> inside the label represents the three lines of the hamburger icon -->
-      </label>
-      <!-- Menu -->
-      <nav>
-        <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="#">Article</a></li>
-          <li><a href="#">Sources</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <!-- <li>
-            <form class="search-form">
-              <input type="search" placeholder="Search...">
-              <button type="submit">Search</button>
-            </form>
-          </li> -->
-        </ul>
-      </nav>
-    </header>
+    
+   <header>
+    <img src="./Images/Game_Wave_Logo.png" alt="Game Wave Logo" />
+    <a id="hamBurger" href="javascript:void(0);" class="icon">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a id="closeHamBurger" href="javascript:void(0);" class="closeNav d-none">
+      X
+    </a>
+    <nav id="nav-bar" class="navBar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+   </header>
 
     <!-- Main -->
 <main>
-  
+  <section class="featured-section">
+    <h2>Treanding</h2>
+    <div class = "GameCard">
+      <img src="./images/fighter.jpg" alt="hero" >
+      <div class="card-content">
+        <h2>
+         Prince Of Persia
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magni
+          alias in quos quod ratione velit numquam nesciunt vel doloribus
+          quaerat sed expedita, accusamus aspernatur rem, voluptates ipsum quas
+          ut?
+        </p>
+        <a href="#" class="button">
+          Find out more 
+          <span class="symbols-outlined">
+            &#8688;
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class = "GameCard">
+      <img src="./images/fighter.jpg" alt="hero" >
+      <div class="card-content">
+        <h2>
+         Prince Of Persia
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magni
+          alias in quos quod ratione velit numquam nesciunt vel doloribus
+          quaerat sed expedita, accusamus aspernatur rem, voluptates ipsum quas
+          ut?
+        </p>
+        <a href="#" class="button">
+          Find out more 
+          <span class="symbols-outlined">
+            &#8688;
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class = "GameCard">
+      <img src="./images/fighter.jpg" alt="hero" >
+      <div class="card-content">
+        <h2>
+         Prince Of Persia
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magni
+          alias in quos quod ratione velit numquam nesciunt vel doloribus
+          quaerat sed expedita, accusamus aspernatur rem, voluptates ipsum quas
+          ut?
+        </p>
+        <a href="#" class="button">
+          Find out more 
+          <span class="symbols-outlined">
+            &#8688;
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
     <!-- Footer -->
     <footer>
       <div class="footer-content">
         <div class="footer-content-about">
-          <!-- About Game Wave -->
           <h4>About Game Wave</h4>
           <p>
             Game Wave is a website that provides you with the latest news and
@@ -67,7 +113,6 @@
         </div>
         <div class="footer-content-link">
           <div class="footer-location">
-            <!-- location -->
             <div class="footer-content-link-icon">
               <a href="" aria-label="location">
                 <i class="fa-solid fa-location-dot" aria-hidden="true"
@@ -79,7 +124,6 @@
             <p>123 Main Street, New York, NY 10030</p>
           </div>
           <div class="footer-phone">
-            <!-- phone -->
             <div class="footer-content-link-icon">
               <a href="" aria-label="phone">
                 <i class="fa-solid fa-phone" aria-hidden="true"></i>
@@ -89,7 +133,6 @@
             <p>123-456-7890</p>
           </div>
           <div class="footer-email">
-            <!-- email -->
             <div class="footer-content-link-icon">
               <a href="" aria-label="email">
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
@@ -101,11 +144,9 @@
         </div>
         <div class="footer-content-final">
           <div class="footer-logo">
-            <!-- Logo -->
             <img src="./Images/Game_Wave_Logo.png" alt="Game Wave Logo" />
           </div>
           <div class="footer-social">
-            <!-- Social Media -->
             <h4 class="footer-social-text">Follow Us</h4>
             <ul class="social-list">
               <li>
@@ -131,7 +172,6 @@
             </ul>
           </div>
           <div class="footer-subscribe">
-            <!-- Subscribe -->
             <h4 class="footer-subscribe-text">Subscribe</h4>
             <div class="subscribe-section">
                 <input type="email" placeholder="Enter your email" />
@@ -146,10 +186,10 @@
         
       </div>
       <div class="footer-credit">
-        <!-- Credit -->
         <p> &copy; 2024 Game Wave. All Rights Reserved.</p>
       </div>
       </div>
     </footer>
   </body>
+  <script src="./index.js" defer></script>
 </html>
