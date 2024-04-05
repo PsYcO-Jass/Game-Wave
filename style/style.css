@@ -74,11 +74,11 @@ header {
     border-radius: 10px;
     color: #ffff;
 }
-.navBar_active.slide-bottom {
-	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.navBar_active.openNavbar {
+	-webkit-animation: openNavbar 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: openNavbar 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-@-webkit-keyframes slide-bottom {
+@-webkit-keyframes openNavbar {
     0% {
       -webkit-transform: translateY(0);
               transform: translateY(0);
@@ -88,7 +88,7 @@ header {
               transform: translateY(100px);
     }
   }
-  @keyframes slide-bottom {
+  @keyframes openNavbar {
     0% {
       -webkit-transform: translateY(0);
               transform: translateY(0);
@@ -202,7 +202,7 @@ section.featured-section {
     padding: 1rem;
 }
 
-.GameCard {
+.game_card {
     height: 30rem;
     border-radius: 10px;
     overflow: hidden;
@@ -427,16 +427,16 @@ footer {
     text-align: center;
     font-size: clamp(1.5rem, 5vw, 4rem);
  }
-    .GameCard {
+    .game_card {
         grid-column: span 1; /* Span one column */
       }
       
-      .GameCard:nth-child(odd) {
+      .game_card:nth-child(odd) {
         grid-row: span 2; /* Span two rows */
         grid-column: span 2;
       }
       
-      .GameCard:nth-child(even) {
+      .game_card:nth-child(even) {
         grid-row: span 2; /* Span two rows */
         grid-column: 3; /* Align to the third column */
       }
@@ -569,7 +569,7 @@ footer {
     .trendingText{
         left: 11rem;
     }
-    .GameCard {
+    .game_card {
         height: 30rem;
         border-radius: 10px;
         overflow: hidden;
