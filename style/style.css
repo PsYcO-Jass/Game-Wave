@@ -104,6 +104,9 @@ main section{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
+.featured-section h2{
+    grid-column: span 3;
+}
 .GameCard {
     height: 36rem;
     border-radius: 10px;
@@ -225,6 +228,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 1rem;
+    list-style: none;
   }
   
   .footer-social ul li {
