@@ -68,10 +68,37 @@ header {
     left: 0;
     right: 0;
 }
+.mobil-toggle{
+    padding: 10px 14px;
+    background: #242447;
+    border-radius: 10px;
+    color: #ffff;
+}
 .navBar_active.slide-bottom {
 	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  
 .navBar_active ul{
     padding: 2rem 1rem 1rem;
     text-align: center;
