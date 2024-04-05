@@ -285,9 +285,16 @@ footer {
 .source-file-item{
   margin-bottom: 1rem;
   position: relative;
-  border: 2px solid var(--green);
+  border: 2px solid var(--white);
   padding: 1rem;
-  box-shadow: 0 0 10px 0 var(--green);
+  box-shadow: 0 0 10px 0 var(--white);
+}
+.source-file-item-link:hover{
+  border-bottom: 1px solid var(--green);
+}
+.source-file-item:hover{
+  border: 2px solid var(--green);
+  box-shadow: 0 0 20px 0 var(--green);
 }
 
 .source-file-item-image img{
@@ -302,11 +309,6 @@ footer {
   color: var(--white);
   font-size: 1rem;
   padding: 0.5rem 1rem;
-}
-
-.source-file-item-link a:hover{
-  background: var(--green);
-  color: var(--logoblack);
 }
 
 .source-file-item-link h3{
