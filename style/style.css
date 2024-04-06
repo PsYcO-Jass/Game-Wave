@@ -173,7 +173,26 @@ header img{
     padding: 1rem;
     margin: auto;
 }
-main.container section{
+.topRated_section {
+    display: grid;
+    gap: 1rem;
+}
+.topratedParent{
+    background-color: #0000003d;
+}
+.topRated-heading{
+    text-align: center;
+}
+.topRated-heading h2{
+    font-size: clamp(1.5rem, 5vw, 4rem);
+}
+.upcomingParent {
+    background-color: #dddddd;
+}
+.featureParent {
+    background-color: #0000003d;
+}
+main div section{
     display: grid;
     gap: 1rem;
     margin-top: 1rem
@@ -261,6 +280,13 @@ section.featured-section {
 .upcomingEvent article{
     display: grid;
     gap: 1rem
+}
+.upcomingEvent article div {
+    background-color: #eeeded;
+    padding: 1rem;
+}
+.upcomingEvent h2{
+    font-size: clamp(1.5rem, 5vw, 4rem);
 }
 /****************** MAIN END ********************/
 
@@ -379,6 +405,21 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 1rem;
+    }
+    .upcomingEvent article div{
+        align-content: center;
+    }
+    .upcomingImg img{
+       width: 60%;
+    }
+    .upcomingImg{
+        text-align: center;
+    }
+    .topRated_section {
+        grid-template-columns: 1fr 1fr;
+    }
+    .topRated_section p{
+        align-content: center;
     }
  .trendingText{
     grid-column: span 2;
